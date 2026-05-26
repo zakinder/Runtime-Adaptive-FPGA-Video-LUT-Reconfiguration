@@ -65,3 +65,9 @@ This flow separates LUT preparation from LUT activation. As a result, the system
 ## Status
 
 Initial LUT reconfiguration flow description for documentation and publication preparation.
+
+
+After this file, add:
+
+```text
+docs/diagnostic-readback.md
