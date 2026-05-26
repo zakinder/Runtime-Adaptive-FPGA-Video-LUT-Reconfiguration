@@ -33,3 +33,35 @@ Process Live RGB Stream
     |
     v
 Read Back Active Configuration
+
+## Step 1 — Host Writes LUT Profile Data
+
+The host software writes LUT profile values through the control interface. These values may represent compressed max, mid, and min color-boundary entries or other RGB transformation parameters.
+
+## Step 2 — Shadow LUT Buffer Receives Updates
+
+New LUT data is first stored in a shadow buffer instead of being applied directly to the active video path. This prevents partial or unstable LUT writes from affecting the live stream.
+
+## Step 3 — Command Index Selects Profile
+
+A command index is used to select the intended LUT profile or palette behavior. This allows multiple profiles to be addressed without rewriting the full processing path.
+
+## Step 4 — Activation Control Applies Update
+
+Once the shadow buffer contains a valid configuration, the activation control logic transfers or switches the selected LUT profile into the active LUT bank.
+
+## Step 5 — Active LUT Bank Drives Video Mapping
+
+The active LUT bank supplies the currently selected lookup behavior to the RGB mapping logic. Incoming pixels are processed according to the active LUT configuration.
+
+## Step 6 — Diagnostic Readback Verifies State
+
+The diagnostic readback path allows software to confirm the active LUT values, selected command index, and applied configuration state.
+
+## Technical Benefit
+
+This flow separates LUT preparation from LUT activation. As a result, the system can update color behavior safely while preserving live video continuity.
+
+## Status
+
+Initial LUT reconfiguration flow description for documentation and publication preparation.
