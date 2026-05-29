@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project Documentation
+    url: https://github.com/zakinder/Runtime-Adaptive-FPGA-Video-LUT-Reconfiguration
+    about: Review the repository README and documentation before opening an issue.
