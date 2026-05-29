@@ -63,3 +63,22 @@ RGB Mapping Logic
     |
     v
 Live Video Output
+```
+
+## Control Flow
+
+1. Host software writes LUT profile data.
+2. LUT data is stored in the shadow LUT buffer.
+3. Host selects a command index or profile.
+4. Activation control validates and applies the update.
+5. Active LUT bank switches to the updated values.
+6. RGB mapping logic processes the live video stream.
+7. Diagnostic readback confirms active configuration.
+
+## Design Benefit
+
+The architecture separates LUT preparation from LUT activation. This allows the FPGA video pipeline to continue operating while new LUT behavior is loaded, checked, and activated safely.
+
+## Status
+
+Initial architecture description for documentation and publication preparation.
