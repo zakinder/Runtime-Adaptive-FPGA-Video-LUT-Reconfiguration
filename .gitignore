@@ -1,0 +1,49 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Build and simulation outputs
+build/
+dist/
+out/
+work/
+transcript
+*.log
+*.jou
+*.wdb
+*.vcd
+*.fst
+*.ghw
+*.vvp
+*.o
+*.obj
+
+# FPGA tool outputs
+*.bit
+*.bin
+*.ltx
+*.dcp
+*.rpt
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.srcs/
+
+# Generated documents
+*.tmp
+~$*
